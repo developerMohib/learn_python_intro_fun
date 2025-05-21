@@ -1,16 +1,9 @@
-t = int(input())
-for _ in range(t):
-    n = int(input())
-    a = list(map(int, input().split()))
-
-    liar_found = False
-
-    for i in range(n - 1):
-        if a[i] == 0 and a[i + 1] == 0:
-            liar_found = True
-            break
-
-    if liar_found:
+p = int(input())  # test or count play with others
+for _ in range(p):
+    n = int(input())  # number of player
+    a = list(map(int, input().split()))  # win list or lose list of player
+    total_wins = sum(a)
+    if total_wins > n - 1 or total_wins == 0:
         print("YES")
     else:
         print("NO")
