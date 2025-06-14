@@ -6,4 +6,5 @@ def max_adjacent_diff(nums):
         next = (i + 1) % length
         difference = abs(nums[i] - nums[next])
         maxDiff = max(difference, maxDiff)
-        return maxDiff
+
+    return maxDiff
